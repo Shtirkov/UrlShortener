@@ -30,7 +30,7 @@ services:
     environment:
       ConnectionStrings__Postgres: Host=postgres;Database=urlshortener;Username=postgres;Password=postgres
       ConnectionStrings__Redis: redis:6379
-      BaseUrl: http://localhost:8080
+      BaseUrl: http://localhost:3001
     ports:
       - "8080:8080"
     depends_on:

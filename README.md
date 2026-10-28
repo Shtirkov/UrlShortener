@@ -8,7 +8,7 @@ ASP.NET Core 10 API (EF Core, Postgres, Redis cache) and a Next.js 16 frontend.
 docker compose up --build -d
 ```
 
-- UI: http://localhost:3001
+- UI and short links: http://localhost:3001
 - API: http://localhost:8080 (`POST /api/urls`, `GET /{code}`)
 
 ## Test
