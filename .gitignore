@@ -1,0 +1,24 @@
+# .NET
+bin/
+obj/
+*.user
+TestResults/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+npm-debug.log*
+
+# Environment
+.env*
+*.pem
+
+# IDE / OS
+.vs/
+.vscode/
+.idea/
+.DS_Store
