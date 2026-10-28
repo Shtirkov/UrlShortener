@@ -16,7 +16,8 @@ public static class DependencyInjection
             options.InstanceName = "url:";
         });
         services.AddScoped<IShortUrlRepository, ShortUrlRepository>();
-        services.AddScoped<UrlShortenerService>();
+        services.AddSingleton<ICodeGenerator, CodeGenerator>();
+        services.AddScoped<IUrlShortenerService, UrlShortenerService>();
         return services;
     }
 }

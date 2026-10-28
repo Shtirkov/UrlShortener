@@ -2,10 +2,10 @@ using System.Security.Cryptography;
 
 namespace UrlShortener.Application;
 
-public static class CodeGenerator
+public class CodeGenerator : ICodeGenerator
 {
     public const int Length = 7;
     public const string Alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
-    public static string Generate() => RandomNumberGenerator.GetString(Alphabet, Length);
+    public string Generate() => RandomNumberGenerator.GetString(Alphabet, Length);
 }

@@ -8,7 +8,7 @@ public record ShortenRequest(string Url);
 public record ShortenResponse(string Code, string ShortUrl, string LongUrl);
 
 [ApiController]
-public class UrlsController(UrlShortenerService service, IConfiguration configuration) : ControllerBase
+public class UrlsController(IUrlShortenerService service, IConfiguration configuration) : ControllerBase
 {
     [HttpPost("api/urls")]
     public async Task<ActionResult<ShortenResponse>> Shorten(ShortenRequest request, CancellationToken cancellationToken)

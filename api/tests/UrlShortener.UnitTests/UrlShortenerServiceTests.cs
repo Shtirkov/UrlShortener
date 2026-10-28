@@ -12,7 +12,7 @@ public class UrlShortenerServiceTests
     private readonly MemoryDistributedCache _cache = new(Options.Create(new MemoryDistributedCacheOptions()));
     private readonly UrlShortenerService _service;
 
-    public UrlShortenerServiceTests() => _service = new UrlShortenerService(_repository, _cache);
+    public UrlShortenerServiceTests() => _service = new UrlShortenerService(_repository, _cache, new CodeGenerator());
 
     [Theory]
     [InlineData("https://example.com")]
