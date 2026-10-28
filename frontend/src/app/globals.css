@@ -3,6 +3,13 @@
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --animate-drift: drift 24s ease-in-out infinite alternate;
+
+  @keyframes drift {
+    to {
+      transform: translate3d(10vw, 8vh, 0) scale(1.15);
+    }
+  }
 }
 
 :root {
